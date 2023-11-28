@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  minio:
+    image: quay.io/minio/minio
+    command: server /data --console-address ":9001"
+    container_name: minio_server_upload
+    ports:
+      - "9000:9000"  # Expose MinIO on port 9000
+    environment:
+      MINIO_ROOT_USER: minio_admin  # Set your desired username
+      MINIO_ROOT_PASSWORD: minio_password  # Set your desired password
+    volumes:
+      - minio_data:/data  # Mount volume for persistent data storage
+
+  files_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app  # Mount your application code
+    depends_on:
+      - minio
+
+volumes:
+  minio_data:
