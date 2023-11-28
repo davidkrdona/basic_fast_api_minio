@@ -14,8 +14,8 @@ This repository demonstrates how to implement file upload and file download func
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/davidkrdona/fastapi-minio-file-upload-download.git
-   cd fastapi-minio-file-upload-download
+   git clone https://github.com/davidkrdona/basic_fast_api_minio.git    
+   cd basic_fast_api_minio
 
 2. Go to `files/` and run `docker-compose up -d`
 3. Check dockers are running with `docker ps`
