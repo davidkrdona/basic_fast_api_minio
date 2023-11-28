@@ -4,10 +4,11 @@ This repository demonstrates how to implement file upload and file download func
 
 ## Prerequisites
 
+* All of this is part of the requirements so no need to install them since its dockerized.
 - Python (3.7 or later)
 - FastAPI (`pip install fastapi`)
 - MinIO client (`pip install minio`)
-- Docker (optional, for running MinIO locally using Docker)
+- Docker (Mandatory, for running MinIO locally using Docker)
 
 ## Setup
 
@@ -23,7 +24,7 @@ This repository demonstrates how to implement file upload and file download func
 Eg:
 `"Gateway": "172.22.0.1, "IPAddress": "172.22.0.2", "IPPrefixLen": 16,`
 
-This could also happen with the MinIO so please access on http://localhost:9001/browser
+This could also happen with the MinIO so please access on `http://localhost:9001/browser` or `http://172.22.0.2:9001/browser`
 
 ![](files/assets/docker_minio.png)
 
